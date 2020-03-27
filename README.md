@@ -64,6 +64,21 @@ SleekTypography(
 
 For a complete definition example, see [the default definition](lib/src/typography_data_fallback.dart).
 
+
+### Updating global typography
+
+Typography can be updated from wherever in the tree. This may be usefull to be responsive : adapting content size when `MediaQuery.size` changes for example.
+
+```dart
+SleekTypography.update(context, SleekTypographyData(
+        sizes: <see example>
+        weights: <see example>
+        families: <see example>
+        styles: <see example>
+    ),
+);
+```
+
 ### Widgets
 
 #### Text
@@ -172,6 +187,10 @@ SleekText("hello" style: SleekStyle.caption3())
 
 Content let you define a default predefined level for all its descendants.
 
+###### Small
+
+![image](https://github.com/aloisdeniel/sleek_typography/raw/master/images/content_small.png)
+
 ```dart
 SleekContent.small(
     child: Column(
@@ -181,8 +200,30 @@ SleekContent.small(
             SleekText("caption" style: SleekStyle.caption()),
         ]
     )
-),
+)
 ```
+
+###### Normal
+
+![image](https://github.com/aloisdeniel/sleek_typography/raw/master/images/content_normal.png)
+
+
+```dart
+SleekContent.normal(
+    child: Column(
+        children: <Widget>[
+            SleekText("title" style: SleekStyle.title()),
+            SleekText("body" style: SleekStyle.body()),
+            SleekText("caption" style: SleekStyle.caption()),
+        ]
+    )
+)
+```
+
+###### Big
+
+![image](https://github.com/aloisdeniel/sleek_typography/raw/master/images/content_big.png)
+
 
 ```dart
 SleekContent.big(
@@ -193,7 +234,7 @@ SleekContent.big(
             SleekText("caption" style: SleekStyle.caption()),
         ]
     )
-),
+)
 ```
 
 ## Thanks
