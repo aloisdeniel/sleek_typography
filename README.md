@@ -42,7 +42,7 @@ dependencies:
 
 ## Usage
 
-### Defining global spacing
+### Defining global typography
 
 You can define four kind of presets :
 * Sizes (`1` to `10`) : font sizes
@@ -170,7 +170,7 @@ SleekText("hello" style: SleekStyle.caption3())
 
 #### Content
 
-Content let you define a default predefined style for all descendant.
+Content let you define a default predefined level for all its descendants.
 
 ```dart
 SleekContent.small(
